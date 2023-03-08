@@ -1,13 +1,420 @@
 body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale; 
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Estilos generales */
+
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.works {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: space-around;
+}
+
+.work-item {
+  flex-basis: 40%;
+  margin: 30px;
+}
+
+.work-item .mask {
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+  border: 1px solid #eee;
+  box-shadow: 0px 5px 15px #ddd;
+}
+.work-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 400ms;
+}
+
+
+.work-item .mask img:hover {
+  width: 110%;
+  margin-right: 30%;
+}
+
+.work-item span {
+  display: block;
+  color: gray;
+  margin-top: 25px;
+}
+
+.work-item h2 {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 30px;
+  color: black;
+}
+
+.work-item a {
+  color: black;
+  text-decoration: none;
+  transition: all 300ms;
+}
+
+.work-item a:hover {
+  color: #fa4529;
+}
+
+.work-item h3 {
+  display: block;
+  padding-top: 15px;
+  margin-top: 0px;
+  border-top: 1px solid #ddd;
+  color: #444;
+}
+
+/* header */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  align-items: center;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 132px;
+  background-color: #444;
+  color: #eee;
+  border-bottom: 3px solid #fa4529;
+  margin-bottom: 35px;
+}
+
+.header .logo{
+  flex-grow: 2;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+
+.header .logo span {
+  display: block;
+  font-size: 95px;
+  font-weight: bolder;
+  margin-top: -8px;
+}
+
+.header .logo h3 {
+  display: block;
+  flex-basis: 40px;
+  margin-left: 10px;  
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.header nav {
+  flex-grow: 1;
+}
+
+.header nav ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+}
+
+.header li {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 16px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.header li a {
+  color: #eee;
+  text-decoration: none;
+  transition: all 300ms;
+}
+
+.header .active,
+.header a:hover {
+  color: #fa4529;
+}
+
+/*Cotenido*/
+
+.content {
+  min-height: 500px;
+  width: 90%;
+  padding-top: 80px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0 auto;
+}
+
+/* inicio */
+
+.home h1{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 400;
+  font-size: 50px;
+  margin-top: 80px;
+  margin-bottom: 0px;
+}
+
+.home strong {
+  color: #fa4529;
+}
+
+.home h2 {
+  color: gray;
+  font-weight: lighter;
+}
+
+.home .link {
+  margin-top: 10px;
+  padding: 7px;
+  border-radius: 5px;
+  color: white;
+  background-color: #fa4529;
+  text-decoration: none;
+  font-size: 24px;
+  transition: all 400ms;
+}
+
+.home .link:hover {
+  background-color: green;
+}
+
+
+.home .lasts-works {
+  text-align: center;
+}
+
+/* titulos */
+
+.page .heading,
+.home .heading,
+.portafolio .heading,
+.acerca .heading,
+.contacto .heading,
+.curriculum .heading {
+  font-size: 38px;
+  font-weight: 500;
+  color: black;
+  padding-top: 10px;
+  margin-bottom: 0px;
+}
+
+.page .heading {
+  font-size: 55px;
+}
+
+/* botones */
+
+input[type="text"],
+textarea {
+  display: block;
+  padding: 15px;
+  margin-top: 25px;
+  width: 250px;
+}
+
+button {
+  padding: 15px;
+  border: 0;
+  border-radius: 5px;
+  font-size: 15px;
+  color: white;
+  background-color: #fa4529;
+  text-decoration: none;
+  transition: all 300ms;
+  cursor: pointer;
+}
+
+.toogle {
+  display: none;
+}
+
+
+button:hover {
+  background-color: green;
+}
+
+/* Proyectos */
+
+.page-work {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding-top: 70px;
+}
+
+.page_content {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+  justify-content: flex-start;
+}
+
+.page_content a {
+  width: 50%;
+  padding: 15px;
+  border: 0;
+  border-radius: 5px;
+  font-size: 15px;
+  color: white;
+  background-color: #fa4529;
+  text-decoration: none;
+  text-align: center;
+  transition: all 300ms;
+  cursor: pointer;
+}
+
+.page_content a:hover {
+  background-color: green;
+}
+
+.page-work .mask {
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+  border: 1px solid #eee;
+  box-shadow: 0px 5px 15px #ddd;
+}
+
+.page-work img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 600ms;
+}
+
+.page-work .mask img:hover {
+  width: 110%;
+  margin-right: 30%;
+}
+
+.contact button {
+  margin-top: 15px;
+}
+
+
+.footer {
+  text-align: center;
+  font-size: 14px;
+  min-height: 40px;
+  line-height: 18px;
+  margin-top: 80px;
+  padding-top: 45px;
+  border-top: 3px solid black;
+  background-color: #f5f5f5;
+  color: #444;
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .content {
+    padding-top: 30px;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+  }
+  
+  .header .logo span {
+    font-size: 90px;
+  }
+  
+  .header nav ul {
+    flex-direction: column;
+    background-color: #1b1a1a;
+    position: fixed;
+    left: 100%;
+    top: 67px;
+    width: 100%;
+    justify-content: center;
+    padding-left: 0;
+    height: calc(100% - 80px);
+    overflow-y: auto;
+    transition: all 400ms;
+  }
+  
+  .header nav ul.active {
+    left: 0;
+  }
+
+  .header li {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .toogle {
+    display: block;
+  }
+
+  .home {
+    text-align: center;
+  }  
+
+  /* works */
+    
+  .works {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .work-item {
+    margin-right: 0px;
+  }
+  
+  .page-work {
+  flex-direction: column;
+  }
+
+  .page_content {
+    margin-top: 0;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .page_content a {
+    margin: 0 auto;
+    width: 50%;
+    padding: 15px;
+    border: 0;
+    border-radius: 5px;
+    font-size: 15px;
+    color: white;
+    background-color: #fa4529;
+    text-decoration: none;
+    text-align: center;
+    transition: all 300ms;
+    cursor: pointer;
+  }
+
 }
