@@ -6,7 +6,7 @@
 
 ![Mobile view](/assets/img/foto3.png)
 
-[LIVE PREVIEW](http://github)
+[LIVE PREVIEW](https://brandt322.github.io/Portafolio/)
 
 ## Social media:
 
